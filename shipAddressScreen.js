@@ -11,20 +11,68 @@ import { Label, Form, Item, Input, Container } from 'native-base';
 const ShipAddressScreen = ({ navigation }) => {
     return (
 
-        <TouchableOpacity style={styles.appButtonContainer}
-            onPress={() => navigation.navigate('ShipAddressScreen')}>
-            <Button transparent light>
-                <Text style={styles.appButtonText}>添加收件地址</Text>
+        <View style={styles.screen}>
+            <Text>HI </Text>
+            <TextInput
+                style={{
+                    height: 40,
+                    borderBottomColor: '#d1cfcf',
+                    borderBottomWidth: 1.5,
+                }}
+                placeholder="收件人"
+            />
+            <View>
+                <Form>
+                    <Item inlineLabel style={{ paddingLeft: 0, marginLeft: 0 }}>
+                        <Label>+86 China</Label>
+                        <Input placeholder="联系电话" />
+                    </Item>
+                </Form>
+            </View>
 
-            </Button>
+            <TextInput
+                style={{
+                    height: 40,
+                    borderBottomColor: '#d1cfcf',
+                    borderBottomWidth: 1.5,
 
-            <Text style={{
-                alignSelf: 'center'
-            }}>您还未添加任何地址，请点击右上角 “添加收件地址”</Text>
+                }}
+                placeholder="所在地区"
+            />
+            <TextInput
+                style={{
+                    height: 40,
+                    borderBottomColor: '#d1cfcf',
+                    borderBottomWidth: 1.5,
 
-        </TouchableOpacity>
+                }}
+                placeholder="街道地址"
+            />
+            <TextInput
+                style={{
+                    height: 40,
+                    borderBottomColor: '#d1cfcf',
+                    borderBottomWidth: 1.5,
+                    marginBottom: 15,
 
+                }}
+                placeholder="邮编"
+            />
 
+            <View>
+                <TouchableOpacity style={styles.appButtonContainer}>
+                    <Text style={styles.appButtonText}>提交</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.appButtonContainerTwo}>
+                    <Text style={styles.appButtonText}>取消</Text>
+                </TouchableOpacity>
+            </View>
+
+            <Button title="back to Home Page"
+                onPress={() => this.props.navigation.navigate('Home')}
+            />
+
+        </View >
     );
 };
 

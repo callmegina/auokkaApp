@@ -8,6 +8,8 @@ import OrderScreen from './myOrderScreen';
 import ShoppingCart from './shoppingCartScreen';
 import AddShipAddress from './addShipAddressScreen';
 import ShipAddressScreen from './addShipAddressScreen';
+import FoodItemScreen from './foodItemScreen';
+
 
 import { createStackNavigator } from "@react-navigation/stack";
 
@@ -26,9 +28,10 @@ const screenOptionStyle = {
 const MainStackNavigator = () => {
     return (
         <Stack.Navigator screenOptions={screenOptionStyle}>
-            <Stack.Screen name="AUOKKA" component={Home}
+
+            <Stack.Screen name="购物车" component={AddShipAddress}
             />
-            <Stack.Screen name="购物车" component={ShoppingCart}
+            <Stack.Screen name="AUOKKA" component={ShipAddressScreen}
             />
         </Stack.Navigator>
     );
